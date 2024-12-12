@@ -7,6 +7,11 @@ import flixel.FlxG;
 import ModHandler;
 import Hscript;
 
+#if sys
+import sys.io.File;
+import sys.FileSystem;
+#end
+
 class PlayState extends FlxState {
 	public static var instance:PlayState = null;
 	public var scriptArray:Array<Hscript> = [];
