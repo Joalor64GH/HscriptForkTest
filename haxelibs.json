@@ -31,6 +31,10 @@
       "type": "haxelib"
     },
     {
+      "name": "hxcpp-debug-server",
+      "type": "haxelib"
+    },
+    {
       "name": "polymod",
       "type": "haxelib"
     },
