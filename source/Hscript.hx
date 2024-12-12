@@ -10,6 +10,7 @@ import hscript.*;
 import flixel.*;
 import flixel.util.*;
 import flixel.math.*;
+import flixel.text.FlxText;
 
 #if sys
 import sys.io.File;
@@ -131,7 +132,6 @@ class Hscript extends FlxBasic {
 		});
 
 		// Flixel
-		setVariable('FlxAtlasFrames', FlxAtlasFrames);
 		setVariable('FlxBasic', FlxBasic);
 		setVariable('FlxColor', getFlxColor());
 		setVariable('FlxG', FlxG);
