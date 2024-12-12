@@ -3,11 +3,7 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="HaxeFlixel Template" file="Template" main="Main" version="1.0.0" company="Joalor64" />
-	<app preloader="flixel.system.FlxPreloader" />
-
-	<!-- Minimum without FLX_NO_GAMEPAD: 11.8, without FLX_NO_NATIVE_CURSOR: 11.2 -->
-	<set name="SWF_VERSION" value="11.8" />
+	<app title="Hscript Fork Test" file="Template" main="Main" version="1.0.0" company="Joalor64" />
 
 	<!-- ____________________________ Window Settings ___________________________ -->
 
@@ -51,11 +47,11 @@
 	<!-- In case you want to use the ui package -->
 	<haxelib name="flixel-ui" />
 
-	<!-- In case you want to use the tools package -->
-	<haxelib name="flixel-tools" />
-
 	<!-- In case you want to use the modding framework -->
 	<haxelib name="polymod" if="FUTURE_POLYMOD" />
+
+	<haxelib name="hscript" />
+	<haxelib name="hxcpp-debug-server" if="desktop debug" />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
@@ -85,6 +81,7 @@
 
 	<!-- For polymod -->
 	<haxedef name="POLYMOD_DEBUG" value="true" if="debug" />
+	<haxedef name="POLYMOD_SCRIPT_EXT" value=".hxs" />
 
 	<!-- _________________________________ Custom _______________________________ -->
 

@@ -21,8 +21,10 @@
       "type": "haxelib"
     },
     {
-      "name": "flixel-tools",
-      "type": "haxelib"
+      "name": "hscript",
+      "type": "git",
+      "ref": "master",
+      "url": "https://github.com/Joalor64GH/hscript"
     },
     {
       "name": "hxcpp",

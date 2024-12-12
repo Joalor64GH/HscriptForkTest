@@ -32,6 +32,9 @@ class Paths {
 	inline static public function json(key:String)
 		return file('data/$key.json');
 
+	inline static public function hxs(key:String)
+		return file('data/$key.hxs');
+
 	#if yaml
 	inline static public function yaml(key:String)
 		return file('data/$key.yaml');

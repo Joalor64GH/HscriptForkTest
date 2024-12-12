@@ -20,11 +20,14 @@ class ModHandler {
 
 	#if FUTURE_POLYMOD
 	private static final extensions:Map<String, PolymodAssetType> = [
-		Paths.SOUND_EXT => AUDIO_GENERIC,
+		'ogg' => AUDIO_GENERIC,
+		'wav' => AUDIO_GENERIC,
+		'mp3' => AUDIO_GENERIC,
 		'png' => IMAGE,
 		'xml' => TEXT,
 		'json' => TEXT,
 		'txt' => TEXT,
+		'hxs' => TEXT,
 		'ttf' => FONT,
 		'otf' => FONT
 	];
@@ -43,11 +46,6 @@ class ModHandler {
 
 	#if FUTURE_POLYMOD
 	public static function loadMods(folders:Array<String>):Void {
-		if (!FileSystem.exists(MOD_DIR))
-			FileSystem.createDirectory(MOD_DIR);
-		if (!FileSystem.exists(MOD_DIR + '/mods-go-here.txt'))
-			File.saveContent(MOD_DIR + '/mods-go-here.txt', '');
-
 		var loadedModlist:Array<ModMetadata> = Polymod.init({
 			modRoot: MOD_DIR,
 			dirs: folders,
@@ -102,6 +100,7 @@ class ModHandler {
 	public static function getParseRules():ParseRules {
 		final output:ParseRules = ParseRules.getDefault();
 		output.addType("txt", TextFileFormat.LINES);
+		output.addType("hxs", TextFileFormat.PLAINTEXT);
 		return output != null ? output : null;
 	}
 
